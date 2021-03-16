@@ -128,7 +128,7 @@
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.Location = new System.Drawing.Point(0, 25);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 1;
+            this.TabControl.SelectedIndex = 2;
             this.TabControl.Size = new System.Drawing.Size(800, 425);
             this.TabControl.Style = MetroFramework.MetroColorStyle.Teal;
             this.TabControl.TabIndex = 1;
