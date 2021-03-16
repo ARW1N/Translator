@@ -34,21 +34,21 @@
             this.Title = new MetroFramework.Controls.MetroLabel();
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
             this.TabMenu = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.ThemeSwitch = new MetroFramework.Controls.MetroToggle();
+            this.MenuTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.MenuLabel = new System.Windows.Forms.Label();
             this.TabTranslate = new MetroFramework.Controls.MetroTabPage();
+            this.TranslateLabel = new System.Windows.Forms.Label();
             this.TranslateButton = new System.Windows.Forms.Button();
             this.OutputLanguage = new MetroFramework.Controls.MetroComboBox();
             this.InputLanguage = new MetroFramework.Controls.MetroComboBox();
             this.OutputTextBox = new MetroFramework.Controls.MetroTextBox();
             this.InputTextBox = new MetroFramework.Controls.MetroTextBox();
             this.TabIdentify = new MetroFramework.Controls.MetroTabPage();
-            this.TranslateLabel = new System.Windows.Forms.Label();
-            this.IdentifyLabel = new System.Windows.Forms.Label();
-            this.IdentifyButton = new System.Windows.Forms.Button();
             this.IdentifyTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.MenuLabel = new System.Windows.Forms.Label();
-            this.MenuTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.ThemeSwitch = new MetroFramework.Controls.MetroToggle();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.IdentifyButton = new System.Windows.Forms.Button();
+            this.IdentifyLabel = new System.Windows.Forms.Label();
             this.TopPanel.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.TabMenu.SuspendLayout();
@@ -128,7 +128,7 @@
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.Location = new System.Drawing.Point(0, 25);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 2;
+            this.TabControl.SelectedIndex = 1;
             this.TabControl.Size = new System.Drawing.Size(800, 425);
             this.TabControl.Style = MetroFramework.MetroColorStyle.Teal;
             this.TabControl.TabIndex = 1;
@@ -155,6 +155,87 @@
             this.TabMenu.VerticalScrollbarHighlightOnWheel = false;
             this.TabMenu.VerticalScrollbarSize = 10;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel1.Location = new System.Drawing.Point(373, 275);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(52, 20);
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroLabel1.TabIndex = 5;
+            this.metroLabel1.Text = "Thema";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroLabel1.UseStyleColors = true;
+            // 
+            // ThemeSwitch
+            // 
+            this.ThemeSwitch.AutoSize = true;
+            this.ThemeSwitch.Location = new System.Drawing.Point(358, 315);
+            this.ThemeSwitch.Name = "ThemeSwitch";
+            this.ThemeSwitch.Size = new System.Drawing.Size(80, 21);
+            this.ThemeSwitch.Style = MetroFramework.MetroColorStyle.Teal;
+            this.ThemeSwitch.TabIndex = 4;
+            this.ThemeSwitch.Text = "Off";
+            this.ThemeSwitch.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.ThemeSwitch.UseSelectable = true;
+            this.ThemeSwitch.UseStyleColors = true;
+            // 
+            // MenuTextBox
+            // 
+            this.MenuTextBox.BackColor = System.Drawing.SystemColors.Control;
+            // 
+            // 
+            // 
+            this.MenuTextBox.CustomButton.Image = null;
+            this.MenuTextBox.CustomButton.Location = new System.Drawing.Point(252, 2);
+            this.MenuTextBox.CustomButton.Name = "";
+            this.MenuTextBox.CustomButton.Size = new System.Drawing.Size(145, 145);
+            this.MenuTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.MenuTextBox.CustomButton.TabIndex = 1;
+            this.MenuTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.MenuTextBox.CustomButton.UseSelectable = true;
+            this.MenuTextBox.CustomButton.Visible = false;
+            this.MenuTextBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.MenuTextBox.Lines = new string[] {
+        "Dit is de translator app gemaakt door Daniel ter Burg en Arwin Sparenberg. Deze a" +
+            "pp kan stukken tekst vertalen naar een andere taal. Ook kan de app een taal herk" +
+            "ennen en laten zien welke taal het is."};
+            this.MenuTextBox.Location = new System.Drawing.Point(198, 100);
+            this.MenuTextBox.MaxLength = 32767;
+            this.MenuTextBox.Multiline = true;
+            this.MenuTextBox.Name = "MenuTextBox";
+            this.MenuTextBox.PasswordChar = '\0';
+            this.MenuTextBox.ReadOnly = true;
+            this.MenuTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.MenuTextBox.SelectedText = "";
+            this.MenuTextBox.SelectionLength = 0;
+            this.MenuTextBox.SelectionStart = 0;
+            this.MenuTextBox.ShortcutsEnabled = true;
+            this.MenuTextBox.Size = new System.Drawing.Size(400, 150);
+            this.MenuTextBox.Style = MetroFramework.MetroColorStyle.Teal;
+            this.MenuTextBox.TabIndex = 3;
+            this.MenuTextBox.Text = "Dit is de translator app gemaakt door Daniel ter Burg en Arwin Sparenberg. Deze a" +
+    "pp kan stukken tekst vertalen naar een andere taal. Ook kan de app een taal herk" +
+    "ennen en laten zien welke taal het is.";
+            this.MenuTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MenuTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.MenuTextBox.UseSelectable = true;
+            this.MenuTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MenuTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // MenuLabel
+            // 
+            this.MenuLabel.AutoSize = true;
+            this.MenuLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MenuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuLabel.ForeColor = System.Drawing.Color.Teal;
+            this.MenuLabel.Location = new System.Drawing.Point(302, 25);
+            this.MenuLabel.Name = "MenuLabel";
+            this.MenuLabel.Size = new System.Drawing.Size(192, 44);
+            this.MenuLabel.TabIndex = 2;
+            this.MenuLabel.Text = "Translator";
+            // 
             // TabTranslate
             // 
             this.TabTranslate.Controls.Add(this.TranslateLabel);
@@ -177,6 +258,18 @@
             this.TabTranslate.VerticalScrollbarHighlightOnWheel = false;
             this.TabTranslate.VerticalScrollbarSize = 10;
             // 
+            // TranslateLabel
+            // 
+            this.TranslateLabel.AutoSize = true;
+            this.TranslateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TranslateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TranslateLabel.ForeColor = System.Drawing.Color.Teal;
+            this.TranslateLabel.Location = new System.Drawing.Point(310, 25);
+            this.TranslateLabel.Name = "TranslateLabel";
+            this.TranslateLabel.Size = new System.Drawing.Size(185, 46);
+            this.TranslateLabel.TabIndex = 7;
+            this.TranslateLabel.Text = "Translate";
+            // 
             // TranslateButton
             // 
             this.TranslateButton.BackColor = System.Drawing.Color.Transparent;
@@ -192,6 +285,7 @@
             this.TranslateButton.TabIndex = 6;
             this.TranslateButton.Text = "Translate";
             this.TranslateButton.UseVisualStyleBackColor = false;
+            this.TranslateButton.Click += new System.EventHandler(this.TranslateButton_Click);
             // 
             // OutputLanguage
             // 
@@ -219,7 +313,7 @@
             this.InputLanguage.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.InputLanguage.UseSelectable = true;
             this.InputLanguage.UseStyleColors = true;
-            this.InputLanguage.SelectedIndexChanged += new System.EventHandler(this.MetroComboBox1_SelectedIndexChanged);
+            this.InputLanguage.SelectedIndexChanged += new System.EventHandler(this.InputLanguage_SelectedIndexChanged);
             // 
             // OutputTextBox
             // 
@@ -240,6 +334,7 @@
         "Output"};
             this.OutputTextBox.Location = new System.Drawing.Point(471, 100);
             this.OutputTextBox.MaxLength = 32767;
+            this.OutputTextBox.Multiline = true;
             this.OutputTextBox.Name = "OutputTextBox";
             this.OutputTextBox.PasswordChar = '\0';
             this.OutputTextBox.ReadOnly = true;
@@ -257,7 +352,7 @@
             this.OutputTextBox.UseSelectable = true;
             this.OutputTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.OutputTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.OutputTextBox.Click += new System.EventHandler(this.MetroTextBox2_Click);
+            this.OutputTextBox.Click += new System.EventHandler(this.Output_Click);
             // 
             // InputTextBox
             // 
@@ -315,49 +410,6 @@
             this.TabIdentify.VerticalScrollbarHighlightOnWheel = false;
             this.TabIdentify.VerticalScrollbarSize = 10;
             // 
-            // TranslateLabel
-            // 
-            this.TranslateLabel.AutoSize = true;
-            this.TranslateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TranslateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TranslateLabel.ForeColor = System.Drawing.Color.Teal;
-            this.TranslateLabel.Location = new System.Drawing.Point(310, 25);
-            this.TranslateLabel.Name = "TranslateLabel";
-            this.TranslateLabel.Size = new System.Drawing.Size(185, 46);
-            this.TranslateLabel.TabIndex = 7;
-            this.TranslateLabel.Text = "Translate";
-            // 
-            // IdentifyLabel
-            // 
-            this.IdentifyLabel.AutoSize = true;
-            this.IdentifyLabel.BackColor = System.Drawing.Color.Transparent;
-            this.IdentifyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdentifyLabel.ForeColor = System.Drawing.Color.Teal;
-            this.IdentifyLabel.Location = new System.Drawing.Point(221, 25);
-            this.IdentifyLabel.Name = "IdentifyLabel";
-            this.IdentifyLabel.Size = new System.Drawing.Size(354, 46);
-            this.IdentifyLabel.TabIndex = 2;
-            this.IdentifyLabel.Text = "Identify a language";
-            this.IdentifyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.IdentifyLabel.Click += new System.EventHandler(this.IdentifyLabel_Click);
-            // 
-            // IdentifyButton
-            // 
-            this.IdentifyButton.BackColor = System.Drawing.Color.Transparent;
-            this.IdentifyButton.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.IdentifyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.IdentifyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.IdentifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IdentifyButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.IdentifyButton.Location = new System.Drawing.Point(333, 281);
-            this.IdentifyButton.Margin = new System.Windows.Forms.Padding(0);
-            this.IdentifyButton.Name = "IdentifyButton";
-            this.IdentifyButton.Size = new System.Drawing.Size(131, 30);
-            this.IdentifyButton.TabIndex = 3;
-            this.IdentifyButton.Text = "Identify Language";
-            this.IdentifyButton.UseVisualStyleBackColor = false;
-            this.IdentifyButton.Click += new System.EventHandler(this.button1_Click);
-            // 
             // IdentifyTextBox
             // 
             // 
@@ -393,86 +445,36 @@
             this.IdentifyTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.IdentifyTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // MenuLabel
+            // IdentifyButton
             // 
-            this.MenuLabel.AutoSize = true;
-            this.MenuLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MenuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuLabel.ForeColor = System.Drawing.Color.Teal;
-            this.MenuLabel.Location = new System.Drawing.Point(302, 25);
-            this.MenuLabel.Name = "MenuLabel";
-            this.MenuLabel.Size = new System.Drawing.Size(192, 44);
-            this.MenuLabel.TabIndex = 2;
-            this.MenuLabel.Text = "Translator";
+            this.IdentifyButton.BackColor = System.Drawing.Color.Transparent;
+            this.IdentifyButton.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.IdentifyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.IdentifyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.IdentifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IdentifyButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.IdentifyButton.Location = new System.Drawing.Point(333, 281);
+            this.IdentifyButton.Margin = new System.Windows.Forms.Padding(0);
+            this.IdentifyButton.Name = "IdentifyButton";
+            this.IdentifyButton.Size = new System.Drawing.Size(131, 30);
+            this.IdentifyButton.TabIndex = 3;
+            this.IdentifyButton.Text = "Identify Language";
+            this.IdentifyButton.UseVisualStyleBackColor = false;
+            this.IdentifyButton.Click += new System.EventHandler(this.IdentifyButton_Click);
             // 
-            // MenuTextBox
+            // IdentifyLabel
             // 
-            this.MenuTextBox.BackColor = System.Drawing.SystemColors.Control;
-            // 
-            // 
-            // 
-            this.MenuTextBox.CustomButton.Image = null;
-            this.MenuTextBox.CustomButton.Location = new System.Drawing.Point(252, 2);
-            this.MenuTextBox.CustomButton.Name = "";
-            this.MenuTextBox.CustomButton.Size = new System.Drawing.Size(145, 145);
-            this.MenuTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.MenuTextBox.CustomButton.TabIndex = 1;
-            this.MenuTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.MenuTextBox.CustomButton.UseSelectable = true;
-            this.MenuTextBox.CustomButton.Visible = false;
-            this.MenuTextBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.MenuTextBox.Lines = new string[] {
-        "Dit is de translator app gemaakt door Daniel ter Burg en Arwin Sparenberg. Deze a" +
-            "pp kan stukken tekst vertalen naar een andere taal. Ook kan de app een taal herk" +
-            "ennen en laten zien welke taal het is."};
-            this.MenuTextBox.Location = new System.Drawing.Point(198, 100);
-            this.MenuTextBox.MaxLength = 32767;
-            this.MenuTextBox.Multiline = true;
-            this.MenuTextBox.Name = "MenuTextBox";
-            this.MenuTextBox.PasswordChar = '\0';
-            this.MenuTextBox.ReadOnly = true;
-            this.MenuTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.MenuTextBox.SelectedText = "";
-            this.MenuTextBox.SelectionLength = 0;
-            this.MenuTextBox.SelectionStart = 0;
-            this.MenuTextBox.ShortcutsEnabled = true;
-            this.MenuTextBox.Size = new System.Drawing.Size(400, 150);
-            this.MenuTextBox.Style = MetroFramework.MetroColorStyle.Teal;
-            this.MenuTextBox.TabIndex = 3;
-            this.MenuTextBox.Text = "Dit is de translator app gemaakt door Daniel ter Burg en Arwin Sparenberg. Deze a" +
-    "pp kan stukken tekst vertalen naar een andere taal. Ook kan de app een taal herk" +
-    "ennen en laten zien welke taal het is.";
-            this.MenuTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.MenuTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.MenuTextBox.UseSelectable = true;
-            this.MenuTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.MenuTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // ThemeSwitch
-            // 
-            this.ThemeSwitch.AutoSize = true;
-            this.ThemeSwitch.Location = new System.Drawing.Point(358, 315);
-            this.ThemeSwitch.Name = "ThemeSwitch";
-            this.ThemeSwitch.Size = new System.Drawing.Size(80, 21);
-            this.ThemeSwitch.Style = MetroFramework.MetroColorStyle.Teal;
-            this.ThemeSwitch.TabIndex = 4;
-            this.ThemeSwitch.Text = "Off";
-            this.ThemeSwitch.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.ThemeSwitch.UseSelectable = true;
-            this.ThemeSwitch.UseStyleColors = true;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel1.Location = new System.Drawing.Point(373, 275);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(52, 20);
-            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroLabel1.TabIndex = 5;
-            this.metroLabel1.Text = "Thema";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel1.UseStyleColors = true;
+            this.IdentifyLabel.AutoSize = true;
+            this.IdentifyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IdentifyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdentifyLabel.ForeColor = System.Drawing.Color.Teal;
+            this.IdentifyLabel.Location = new System.Drawing.Point(221, 25);
+            this.IdentifyLabel.Name = "IdentifyLabel";
+            this.IdentifyLabel.Size = new System.Drawing.Size(354, 46);
+            this.IdentifyLabel.TabIndex = 2;
+            this.IdentifyLabel.Text = "Identify a language";
+            this.IdentifyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.IdentifyLabel.Click += new System.EventHandler(this.IdentifyLabel_Click);
             // 
             // Translate
             // 
