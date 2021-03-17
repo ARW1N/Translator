@@ -17,14 +17,23 @@ namespace Translator
 {
     public partial class Translate : Form
     {
+        private bool moving = false;
+        private Point start = new Point(0, 0);
+
         RestSharp.RestClient client = null;
         RestSharp.RestClient tekstclient = null;
-        RestRequest request = new RestRequest(Method.POST);
-        RestRequest tekstrequest = new RestRequest(Method.POST);
+        RestRequest request;
+        RestRequest tekstrequest;
         IRestResponse response = null;
 
 
-        
+        public class Detection
+        {
+            public string language { get; set; }
+            public bool isReliable { get; set; }
+            public double confidence { get; set; }
+        }
+
         public class Translation
         {
             public string translatedText { get; set; }
@@ -34,7 +43,7 @@ namespace Translator
         public class Data
         {
             public List<Translation> translations { get; set; }
-            public List<List<>>  detections { get; set; }
+            public List<Detection>  detections { get; set; }
         }
 
         public class Root
@@ -72,22 +81,17 @@ namespace Translator
         public string DetectDeserialize(string response)
         {
            
-
-        Root dmyDeserializedClass = JsonConvert.DeserializeObject<Root>(response);
+            
+        Root dmyDeserializedClass = JsonConvert.DeserializeObject<Root>(response.Replace("[[","[").Replace("]]","]"));
 
 
             if (dmyDeserializedClass.data != null)
-                return dmyDeserializedClass.data.detections[0].
+                return dmyDeserializedClass.data.detections[0].language;
 
             return dmyDeserializedClass.message;
 
 
 
-        }
-
-        private void Menu_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void Title_Click(object sender, EventArgs e)
@@ -107,6 +111,7 @@ namespace Translator
 
         private void TranslateButton_Click(object sender, EventArgs e)
         {
+            request = new RestRequest(Method.POST);
             request.AddHeader("content-type", "application/x-www-form-urlencoded");
             request.AddHeader("accept-encoding", "application/gzip");
             /*
@@ -114,7 +119,10 @@ namespace Translator
             */
             request.AddHeader("x-rapidapi-key", "230e6a3282mshdd39f5b3046ad09p1898e6jsn04c87becad77");
             request.AddHeader("x-rapidapi-host", "google-translate1.p.rapidapi.com");
-            request.AddParameter("application/x-www-form-urlencoded", "q=Hello%2C%20world!&source=en&target=de", ParameterType.RequestBody);
+            string TextToTranslate = InputTextBox.Text;
+            string InputLang = InputLanguage.Text;
+            string OutputLang = OutputLanguage.Text;
+            request.AddParameter("application/x-www-form-urlencoded", $"q={TextToTranslate}&source={InputLang}&target={OutputLang}", ParameterType.RequestBody);
             //string TextToTranslate = "q=" + InputTextBox.Text + "&source=en&target=nl";
             //request.AddParameter("application/x-www-form-urlencoded", TextToTranslate, ParameterType.RequestBody);
             response = client.Execute(request);
@@ -122,18 +130,9 @@ namespace Translator
             OutputTextBox.Text = Deserialize(response.Content);
         }
 
-        private void InputLanguage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Output_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void IdentifyButton_Click(object sender, EventArgs e)
         {
+            tekstrequest = new RestRequest(Method.POST);
             tekstrequest.AddHeader("content-type", "application/x-www-form-urlencoded");
             tekstrequest.AddHeader("accept-encoding", "application/gzip");
             tekstrequest.AddHeader("x-rapidapi-key", "230e6a3282mshdd39f5b3046ad09p1898e6jsn04c87becad77");
@@ -142,13 +141,27 @@ namespace Translator
             tekstrequest.AddParameter("application/x-www-form-urlencoded", $"q={textToIdentify}", ParameterType.RequestBody);
            
             response = tekstclient.Execute(tekstrequest);
-            IdentifyTextBox.Text = DetectDeserialize(response.Content);
+            OutputIdentify.Text = DetectDeserialize(response.Content);
         }
 
-        private void IdentifyLabel_Click(object sender, EventArgs e)
+        private void Translate_MouseDown(object sender, MouseEventArgs e)
         {
+            moving = true;
+            start = new Point(e.X, e.Y);
+        }
 
+        private void Translate_MouseUp(object sender, MouseEventArgs e)
+        {
+            moving = false;
+        }
 
+        private void Translate_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (moving)
+            {
+                Point pos = PointToScreen(e.Location);
+                Location = new Point(pos.X - this.start.X, pos.Y - this.start.Y);
+            }
         }
     }
 }

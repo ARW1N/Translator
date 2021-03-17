@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TopPanel = new MetroFramework.Controls.MetroPanel();
             this.MinimizeProgram = new System.Windows.Forms.Button();
             this.ExitProgram = new System.Windows.Forms.Button();
             this.Title = new MetroFramework.Controls.MetroLabel();
@@ -46,34 +45,18 @@
             this.OutputTextBox = new MetroFramework.Controls.MetroTextBox();
             this.InputTextBox = new MetroFramework.Controls.MetroTextBox();
             this.TabIdentify = new MetroFramework.Controls.MetroTabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.OutputIdentify = new System.Windows.Forms.Label();
             this.IdentifyTextBox = new MetroFramework.Controls.MetroTextBox();
             this.IdentifyButton = new System.Windows.Forms.Button();
             this.IdentifyLabel = new System.Windows.Forms.Label();
-            this.TopPanel.SuspendLayout();
+            this.TopPanel = new MetroFramework.Controls.MetroPanel();
             this.TabControl.SuspendLayout();
             this.TabMenu.SuspendLayout();
             this.TabTranslate.SuspendLayout();
             this.TabIdentify.SuspendLayout();
+            this.TopPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TopPanel
-            // 
-            this.TopPanel.Controls.Add(this.MinimizeProgram);
-            this.TopPanel.Controls.Add(this.ExitProgram);
-            this.TopPanel.Controls.Add(this.Title);
-            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPanel.ForeColor = System.Drawing.Color.Black;
-            this.TopPanel.HorizontalScrollbarBarColor = true;
-            this.TopPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.TopPanel.HorizontalScrollbarSize = 10;
-            this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(800, 25);
-            this.TopPanel.TabIndex = 0;
-            this.TopPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.TopPanel.VerticalScrollbarBarColor = true;
-            this.TopPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.TopPanel.VerticalScrollbarSize = 10;
             // 
             // MinimizeProgram
             // 
@@ -249,7 +232,7 @@
             this.TabTranslate.HorizontalScrollbarSize = 10;
             this.TabTranslate.Location = new System.Drawing.Point(4, 38);
             this.TabTranslate.Name = "TabTranslate";
-            this.TabTranslate.Size = new System.Drawing.Size(792, 383);
+            this.TabTranslate.Size = new System.Drawing.Size(792, 353);
             this.TabTranslate.Style = MetroFramework.MetroColorStyle.Teal;
             this.TabTranslate.TabIndex = 1;
             this.TabTranslate.Text = "Translate";
@@ -292,6 +275,15 @@
             this.OutputLanguage.BackColor = System.Drawing.Color.Teal;
             this.OutputLanguage.FormattingEnabled = true;
             this.OutputLanguage.ItemHeight = 24;
+            this.OutputLanguage.Items.AddRange(new object[] {
+            "en",
+            "nl",
+            "de",
+            "it",
+            "fr",
+            "ja",
+            "pt",
+            "es"});
             this.OutputLanguage.Location = new System.Drawing.Point(565, 281);
             this.OutputLanguage.Name = "OutputLanguage";
             this.OutputLanguage.Size = new System.Drawing.Size(125, 30);
@@ -303,17 +295,27 @@
             // 
             // InputLanguage
             // 
+            this.InputLanguage.ForeColor = System.Drawing.Color.Teal;
             this.InputLanguage.FormattingEnabled = true;
             this.InputLanguage.ItemHeight = 24;
+            this.InputLanguage.Items.AddRange(new object[] {
+            "en",
+            "nl",
+            "de",
+            "it",
+            "fr",
+            "ja",
+            "pt",
+            "es"});
             this.InputLanguage.Location = new System.Drawing.Point(110, 281);
             this.InputLanguage.Name = "InputLanguage";
             this.InputLanguage.Size = new System.Drawing.Size(125, 30);
             this.InputLanguage.Style = MetroFramework.MetroColorStyle.Teal;
             this.InputLanguage.TabIndex = 4;
             this.InputLanguage.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.InputLanguage.UseCustomForeColor = true;
             this.InputLanguage.UseSelectable = true;
             this.InputLanguage.UseStyleColors = true;
-            this.InputLanguage.SelectedIndexChanged += new System.EventHandler(this.InputLanguage_SelectedIndexChanged);
             // 
             // OutputTextBox
             // 
@@ -352,7 +354,6 @@
             this.OutputTextBox.UseSelectable = true;
             this.OutputTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.OutputTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.OutputTextBox.Click += new System.EventHandler(this.Output_Click);
             // 
             // InputTextBox
             // 
@@ -393,6 +394,8 @@
             // 
             // TabIdentify
             // 
+            this.TabIdentify.Controls.Add(this.label2);
+            this.TabIdentify.Controls.Add(this.OutputIdentify);
             this.TabIdentify.Controls.Add(this.IdentifyTextBox);
             this.TabIdentify.Controls.Add(this.IdentifyButton);
             this.TabIdentify.Controls.Add(this.IdentifyLabel);
@@ -409,6 +412,37 @@
             this.TabIdentify.VerticalScrollbarBarColor = true;
             this.TabIdentify.VerticalScrollbarHighlightOnWheel = false;
             this.TabIdentify.VerticalScrollbarSize = 10;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(261, 337);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(210, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "The input language is: ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OutputIdentify
+            // 
+            this.OutputIdentify.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OutputIdentify.AutoSize = true;
+            this.OutputIdentify.BackColor = System.Drawing.Color.Transparent;
+            this.OutputIdentify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutputIdentify.ForeColor = System.Drawing.Color.Teal;
+            this.OutputIdentify.Location = new System.Drawing.Point(477, 337);
+            this.OutputIdentify.Name = "OutputIdentify";
+            this.OutputIdentify.Size = new System.Drawing.Size(0, 25);
+            this.OutputIdentify.TabIndex = 5;
+            this.OutputIdentify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // IdentifyTextBox
             // 
@@ -474,7 +508,25 @@
             this.IdentifyLabel.TabIndex = 2;
             this.IdentifyLabel.Text = "Identify a language";
             this.IdentifyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.IdentifyLabel.Click += new System.EventHandler(this.IdentifyLabel_Click);
+            // 
+            // TopPanel
+            // 
+            this.TopPanel.Controls.Add(this.MinimizeProgram);
+            this.TopPanel.Controls.Add(this.ExitProgram);
+            this.TopPanel.Controls.Add(this.Title);
+            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopPanel.ForeColor = System.Drawing.Color.Black;
+            this.TopPanel.HorizontalScrollbarBarColor = true;
+            this.TopPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.TopPanel.HorizontalScrollbarSize = 10;
+            this.TopPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopPanel.Name = "TopPanel";
+            this.TopPanel.Size = new System.Drawing.Size(800, 25);
+            this.TopPanel.TabIndex = 0;
+            this.TopPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TopPanel.VerticalScrollbarBarColor = true;
+            this.TopPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.TopPanel.VerticalScrollbarSize = 10;
             // 
             // Translate
             // 
@@ -491,9 +543,9 @@
             this.Name = "Translate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Translator";
-            this.Load += new System.EventHandler(this.Menu_Load);
-            this.TopPanel.ResumeLayout(false);
-            this.TopPanel.PerformLayout();
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Translate_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Translate_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Translate_MouseUp);
             this.TabControl.ResumeLayout(false);
             this.TabMenu.ResumeLayout(false);
             this.TabMenu.PerformLayout();
@@ -501,6 +553,8 @@
             this.TabTranslate.PerformLayout();
             this.TabIdentify.ResumeLayout(false);
             this.TabIdentify.PerformLayout();
+            this.TopPanel.ResumeLayout(false);
+            this.TopPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -510,7 +564,6 @@
         private MetroFramework.Controls.MetroTabPage TabMenu;
         private MetroFramework.Controls.MetroTabPage TabTranslate;
         private MetroFramework.Controls.MetroTabPage TabIdentify;
-        private MetroFramework.Controls.MetroPanel TopPanel;
         private MetroFramework.Controls.MetroLabel Title;
         private System.Windows.Forms.Button ExitProgram;
         private System.Windows.Forms.Button MinimizeProgram;
@@ -527,6 +580,9 @@
         private System.Windows.Forms.Label MenuLabel;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroToggle ThemeSwitch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label OutputIdentify;
+        private MetroFramework.Controls.MetroPanel TopPanel;
     }
 }
 
