@@ -43,7 +43,7 @@ namespace Translator
         public class Data
         {
             public List<Translation> translations { get; set; }
-            public List<Detection>  detections { get; set; }
+            public List<Detection> detections { get; set; }
         }
 
         public class Root

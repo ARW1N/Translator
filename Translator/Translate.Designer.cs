@@ -33,8 +33,6 @@
             this.Title = new MetroFramework.Controls.MetroLabel();
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
             this.TabMenu = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.ThemeSwitch = new MetroFramework.Controls.MetroToggle();
             this.MenuTextBox = new MetroFramework.Controls.MetroTextBox();
             this.MenuLabel = new System.Windows.Forms.Label();
             this.TabTranslate = new MetroFramework.Controls.MetroTabPage();
@@ -111,7 +109,7 @@
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.Location = new System.Drawing.Point(0, 25);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 2;
+            this.TabControl.SelectedIndex = 0;
             this.TabControl.Size = new System.Drawing.Size(800, 425);
             this.TabControl.Style = MetroFramework.MetroColorStyle.Teal;
             this.TabControl.TabIndex = 1;
@@ -120,8 +118,6 @@
             // 
             // TabMenu
             // 
-            this.TabMenu.Controls.Add(this.metroLabel1);
-            this.TabMenu.Controls.Add(this.ThemeSwitch);
             this.TabMenu.Controls.Add(this.MenuTextBox);
             this.TabMenu.Controls.Add(this.MenuLabel);
             this.TabMenu.HorizontalScrollbarBarColor = true;
@@ -137,32 +133,6 @@
             this.TabMenu.VerticalScrollbarBarColor = true;
             this.TabMenu.VerticalScrollbarHighlightOnWheel = false;
             this.TabMenu.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel1.Location = new System.Drawing.Point(373, 275);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(52, 20);
-            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroLabel1.TabIndex = 5;
-            this.metroLabel1.Text = "Thema";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel1.UseStyleColors = true;
-            // 
-            // ThemeSwitch
-            // 
-            this.ThemeSwitch.AutoSize = true;
-            this.ThemeSwitch.Location = new System.Drawing.Point(358, 315);
-            this.ThemeSwitch.Name = "ThemeSwitch";
-            this.ThemeSwitch.Size = new System.Drawing.Size(80, 21);
-            this.ThemeSwitch.Style = MetroFramework.MetroColorStyle.Teal;
-            this.ThemeSwitch.TabIndex = 4;
-            this.ThemeSwitch.Text = "Off";
-            this.ThemeSwitch.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.ThemeSwitch.UseSelectable = true;
-            this.ThemeSwitch.UseStyleColors = true;
             // 
             // MenuTextBox
             // 
@@ -232,7 +202,7 @@
             this.TabTranslate.HorizontalScrollbarSize = 10;
             this.TabTranslate.Location = new System.Drawing.Point(4, 38);
             this.TabTranslate.Name = "TabTranslate";
-            this.TabTranslate.Size = new System.Drawing.Size(792, 353);
+            this.TabTranslate.Size = new System.Drawing.Size(792, 383);
             this.TabTranslate.Style = MetroFramework.MetroColorStyle.Teal;
             this.TabTranslate.TabIndex = 1;
             this.TabTranslate.Text = "Translate";
@@ -578,8 +548,6 @@
         private System.Windows.Forms.Label IdentifyLabel;
         private MetroFramework.Controls.MetroTextBox MenuTextBox;
         private System.Windows.Forms.Label MenuLabel;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroToggle ThemeSwitch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label OutputIdentify;
         private MetroFramework.Controls.MetroPanel TopPanel;
